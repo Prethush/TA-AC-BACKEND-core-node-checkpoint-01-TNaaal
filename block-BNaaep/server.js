@@ -16,7 +16,7 @@ function handleRequest(req, res) {
 
     req.on('end', () => {
         
-        // index rout (/)
+        // index route (/)
 
         if(req.url === '/' && req.method === 'GET'){
             res.writeHead(200, {'Content-Type': 'text/html'});
@@ -69,7 +69,8 @@ function handleRequest(req, res) {
                     if(err) return console.log(err);
                     fs.close(fd, (err) => {
                         if(err) return console.log(err);
-                        return res.end('Contsct Saved');
+                        res.writeHead(200, {'Content-Type': 'text/html'});
+                        return res.end('<h1>Contact Saved</h1>');
                     })
                 })
             })
