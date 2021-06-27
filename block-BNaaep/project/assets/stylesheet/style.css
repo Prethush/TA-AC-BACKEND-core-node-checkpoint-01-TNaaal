@@ -1,0 +1,23 @@
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+}
+
+h3 {
+    text-align: center;
+}
+.imgContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 0 1 31.5%;
+}
+
+.box img {
+    width: 100%;
+}
